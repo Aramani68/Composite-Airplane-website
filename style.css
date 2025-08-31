@@ -1,0 +1,211 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0c0c0c;
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background-image: url("images/texture.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.hero .content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 650px;
+}
+
+.cta-button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #005fa3;
+}
+
+/* Section styling */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00aaff;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+/* Cards container and card styles */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  min-width: 280px;
+}
+
+.card i {
+  font-size: 2rem;
+  color: #00aaff;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #00aaff;
+  font-size: 1.25rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+/* Process list styling */
+.process-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.process-list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.process-list li::before {
+  content: "\2022";
+  color: #00aaff;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Future section styling */
+.future-section {
+  background-image: url("images/future.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.future-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.future-section .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer styling */
+footer {
+  background: #101010;
+  padding: 2rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.footer-citations {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.footer-citations ol {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.footer-citations li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.citation {
+  font-size: 0.75rem;
+  vertical-align: super;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+}
